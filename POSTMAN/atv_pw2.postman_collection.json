@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "6ab75868-0324-472a-809b-4eaa870657ec",
+		"name": "atv_pw2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29029787"
+	},
+	"item": [
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_categoria\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Categoria/cadastrarCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Categoria",
+								"cadastrarCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Categoria/listarCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Categoria",
+								"listarCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_categoria\": 2,\r\n    \"nome_categoria\": \"teste1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Categoria/alterarCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Categoria",
+								"alterarCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Categoria/excluirCategoria/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Categoria",
+								"excluirCategoria",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/kayky_23866/Downloads/Campeonato_Brasileiro_Série_B_logo.png"
+								},
+								{
+									"key": "nome_produto",
+									"value": "bahia",
+									"type": "text"
+								},
+								{
+									"key": "valor_produto",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "descricao_produto",
+									"value": "serieB",
+									"type": "text"
+								},
+								{
+									"key": "cod_categoria",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/Produto/cadastrarProduto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Produto",
+								"cadastrarProduto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Produto/listarProduto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Produto",
+								"listarProduto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Produto/excluirProduto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Produto",
+								"excluirProduto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
